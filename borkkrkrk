@@ -70,8 +70,8 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 				"I regain 1 spent grit point when I roll a 20 on a firearm attack or score a killing blow"
 			]),
 			recovery : "short rest",
-			usages : "Wisdom modifier per ",
-			usagescalc : "event.value = Math.max(1, What('Wis Mod'));"
+			usages : "Intelligence modifier per ",
+			usagescalc : "event.value = Math.max(1, What('Int Mod'));"
 		},
 		"subclassfeature3.3" : {
 			name : "Trick Shots",
@@ -88,7 +88,7 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 				return (n < 7 ? 2 : n < 10 ? 3 : n < 15 ? 4 : n < 18 ? 5 : 6) + " known";
 			}),
 			extraname : "Trick Shot",
-			extrachoices : ["Bullying Shot", "Dazing Shot", "Deadeye Shot", "Disarming Shot", "Forceful Shot", "Piercing Shot", "Violent Shot", "Winging Shot"],
+			extrachoices : ["Bullying Shot", "Dazing Shot", "Deadeye Shot", "Disarming Shot", "Forceful Shot", "Piercing Shot", "Violent Shot", "Winging Shot", "Intercepting Shot", "Counter Shot"],
 			"bullying shot" : {
 				name : "Bullying Shot",
 				source : ["MM:GMA", 2],
@@ -173,6 +173,7 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 			"counter shot" : {
 				name : "Counter Shot",
 				source : ["MM:GMA", 2],
+				
 				addtional : "2 grit points",
 				description : desc([
 					"As a reaction when I can see a spell being cast, I can make a firearm attack at the caster.",
@@ -296,7 +297,7 @@ WeaponsList["musket-mm"] = {
 	damage : [1, 12, "piercing"],
 	range : "140/480 ft",
 	weight : 10,
-	description : "Two-handed, reload 1, misfire 2",
+	description : "Two-handed, reload 2, misfire 2",
 	abilitytodamage : true,
 	ammo : "musket bullets"
 };
@@ -439,4 +440,66 @@ GearList["ammunition: hand mortar grenade"] = {
 	name : "Hand mortar grenade",
 	amount : "",
 	weight : 0.65
+};
+
+WeaponsList["paddle-foot pistol"] = {
+	regExpSearch : /paddle-foot pistol/i,
+	name : "Paddle-foot Pistol",
+	source : ["MM:GMA", 3],
+	list : "firearm",
+	ability : 2,
+	type: "Firearms",
+	damage : [2, 4, "piercing"],
+	range : "30/90 ft",
+	weight : 4,
+	description : "Light, reload 4, misfire 3, loud 160, scatter",
+	abilitytodamage : true,
+	ammo : "paddle-foot pistol bullets"
+};
+AmmoList["paddle-foot pistol bullets"] = {
+	name : "Paddle-foot Pistol Bullets",
+	source : ["MM:GMA", 3],
+	weight : 0.015,
+	icon : "Bullets",
+	checks : [".Bullet"],
+	display : 50,
+	invName : "Bullets, paddle-foot pistol"
+};
+GearList["ammunition: bullets paddle-foot pistol(20)"] = {
+	infoname : "   Paddle-foot Pistol bullets (20) [4 gp]",
+	source : ["MM:GMA", 3],
+	name : "Bullets, paddle-foot pistol",
+	amount : 20,
+	weight : 0.015
+};
+
+WeaponsList["sawed-off"] = {
+	regExpSearch : /sawed-off/i,
+	name : "Sawed-Off",
+	source : ["MM:GMA", 3],
+	list : "firearm",
+	ability : 2,
+	type: "Firearms",
+	damage : [2, 6, "piercing"],
+	range : "15/40 ft",
+	weight : 7,
+	description : "Reload 2, misfire 3, loud 210, scatter",
+	abilitytodamage : true,
+	ammo : "sawed-off shells"
+};
+AmmoList["sawed-off shells"] = {
+	name : "Sawed-off Shells",
+	source : ["MM:GMA", 3],
+	weight : 0.015,
+	icon : "Bullets",
+	checks : [".Bullet"],
+	display : 50,
+	invName : "Shells, sawed-off"
+};
+GearList["ammunition: shells sawed-off(10)"] = {
+	infoname : "   Sawed-off shells (10) [12 gp]",
+	source : ["MM:GMA", 3],
+	name : "Shells, sawed-off",
+	amount : 10,
+	weight : 0.015
 };
