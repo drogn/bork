@@ -458,3 +458,34 @@ GearList["ammunition: bullets paddle-foot pistol(20)"] = {
 	amount : 20,
 	weight : 0.015
 };
+
+WeaponsList["sawed-off"] = {
+	regExpSearch : /sawed-off/i,
+	name : "Sawed-Off",
+	source : ["MM:GMA", 3],
+	list : "firearm",
+	ability : 2,
+	type: "Firearms",
+	damage : [2, 6, "piercing"],
+	range : "15/40 ft",
+	weight : 7,
+	description : "Reload 2, misfire 3, loud 210, scatter",
+	abilitytodamage : true,
+	ammo : "sawed-off shells"
+};
+AmmoList["sawed-off shells"] = {
+	name : "Sawed-off Shells",
+	source : ["MM:GMA", 3],
+	weight : 0.015,
+	icon : "Shells",
+	checks : [".Shell"],
+	display : 50,
+	invName : "Shells, sawed-off"
+};
+GearList["ammunition: shells sawed-off(10)"] = {
+	infoname : "   Sawed-off shells (10) [12 gp]",
+	source : ["MM:GMA", 3],
+	name : "Shells, sawed-off",
+	amount : 10,
+	weight : 0.015
+};
