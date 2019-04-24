@@ -156,8 +156,15 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 					"Use with firearm attack; The target takes damage and must make a Strength save",
 					"If failed, the target is also knocked prone"
 				])
-			}
-		},
+			},
+			"rapid repair" : {
+				name : "Rapid Repair",
+				source : ["MM:GMA", 2],
+				additional : "1 grit point",
+				description : "\n   " + "I can spend a grit point to attempt to repair a misfired firearm as a bonus action."
+			        action : ["bonus action", " (1 grit point)"]
+		 } 
+                 },
 		"subclassfeature7" : {
 			name : "Quickdraw",
 			source : ["MM:GMA", 2],
