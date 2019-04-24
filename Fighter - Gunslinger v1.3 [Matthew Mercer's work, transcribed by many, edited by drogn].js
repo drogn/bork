@@ -164,7 +164,7 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 			minlevel : 7,
 			description : desc([
 				"I add my proficiency bonus to my initiative",
-				"I can stow a firearm and draw another as a single object interaction on my turn"
+				"I gain an extra item interaction which can only be used to draw or holster a firearm."
 			]),
 			addMod : { type : "skill", field : "Init", mod : "Prof", text : "I add my proficiency bonus to my initiative rolls." }
 		},
@@ -175,19 +175,29 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 			description : "\n   " + "As a bonus action, I can repair a misfired (not broken) firearm by spending 1 grit point",
 			additional : "1 grit point",
 			action : ["bonus action", " (1 grit point)"]
-		},
-		"subclassfeature15" : {
+	
+                 },
+		"subclassfeature10" : {
 			name : "Lightning Reload",
 			source : ["MM:GMA", 2],
-			minlevel : 15,
+			minlevel : 10,
 			description : "\n   " + "I can reload any firearm as a bonus action",
-			action : ["bonus action", ""]
+			action : ["bonus action", ""] 
+                
+                 },
+		"subclassfeature15" : {
+			name : "Trained Professional",
+			source : ["MM:GMA", 2],
+			minlevel : 15,
+			description : "\n   " + "My misfires do not break my weapons. When I would misfire, my guns do not break, but the attack is considered an automatic miss.",
+			
+
 		},
 		"subclassfeature18" : {
 			name : "Vicious Intent",
 			source : ["MM:GMA", 2],
 			minlevel : 18,
-			description : "\n   " + "My firearm attacks score a critical hit on a roll of both 19 and 20",
+			description : "\n   " + "When I crit on an attack roll with a firearm, I can use my bonus action to make another attack, at a creature in range.",
 			calcChanges : {
 				atkAdd : ["if (!isSpell && theWea && (/firearm/).test(theWea.type + theWea.list) && !CritChance) {var CritChance = 19; fields.Description += (fields.Description ? '; ' : '') + 'Crit on 19-20'; }; ", "My attacks with firearms score a critical on a to hit roll of both 19 and 20."]
 			}
@@ -416,4 +426,35 @@ GearList["ammunition: hand mortar grenade"] = {
 	name : "Hand mortar grenade",
 	amount : "",
 	weight : 0.65
+};
+
+WeaponsList["paddle-foot pistol"] = {
+	regExpSearch : /paddle-foot pistol/i,
+	name : "Paddle-foot Pistol",
+	source : ["MM:GMA", 3],
+	list : "firearm",
+	ability : 2,
+	type: "Firearms",
+	damage : [2, 4, "piercing"],
+	range : "30/90 ft",
+	weight : 4,
+	description : "Light, reload 4, misfire 3, loud 160, scatter",
+	abilitytodamage : true,
+	ammo : "paddle-foot pistol bullets"
+};
+AmmoList["paddle-foot pistol bullets"] = {
+	name : "Paddle-foot Pistol Bullets",
+	source : ["MM:GMA", 3],
+	weight : 0.015,
+	icon : "Bullets",
+	checks : [".Bullet"],
+	display : 50,
+	invName : "Bullets, paddle-foot pistol"
+};
+GearList["ammunition: bullets paddle-foot pistol(20)"] = {
+	infoname : "   Paddle-foot Pistol bullets (20) [4 gp]",
+	source : ["MM:GMA", 3],
+	name : "Bullets, paddle-foot pistol",
+	amount : 20,
+	weight : 0.015
 };
