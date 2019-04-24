@@ -168,10 +168,21 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 				
 				])
 			
-      action : [" reaction ", " "]
-      },
+                                action : [" reaction ", " "]
+				
+			"counter shot" : {
+				name : "Counter Shot",
+				source : ["MM:GMA", 2],
+				
+				description : desc([
+					"As a reaction when I can see a spell being cast, I impose disadv.",
+					"\u2022 Amplify: I make a Wis check (DC 10 + spell's level) to make the spell miss me completely"
+				]),
+				action : [" reaction ", " "]
+			}	
+      
 
-      }
+
       
 		},
 		"subclassfeature7" : {
@@ -190,7 +201,7 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 			minlevel : 10,
 			description : "\n   " + "As a bonus action, I can repair a misfired (not broken) firearm by spending 1 grit point",
 			additional : "1 grit point",
-			action : ["bonus action", " (1 grit point)"]
+			action : ["bonus action", "" (1 grit point)"]
 		},
 		"subclassfeature15" : {
 			name : "Lightning Reload",
