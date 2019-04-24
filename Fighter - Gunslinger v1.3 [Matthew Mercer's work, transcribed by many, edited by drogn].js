@@ -177,7 +177,7 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 			action : ["bonus action", " (1 grit point)"]
 	
                  },
-		"subclassfeature10" : {
+		"subclassfeature10.1" : {
 			name : "Lightning Reload",
 			source : ["MM:GMA", 2],
 			minlevel : 10,
