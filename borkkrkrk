@@ -173,7 +173,7 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 			"counter shot" : {
 				name : "Counter Shot",
 				source : ["MM:GMA", 2],
-				
+				minlevel : 15,
 				addtional : "2 grit points",
 				description : desc([
 					"As a reaction when I can see a spell being cast, I can make a firearm attack at the caster.",
