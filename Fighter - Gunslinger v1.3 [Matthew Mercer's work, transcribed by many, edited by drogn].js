@@ -88,7 +88,7 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 				return (n < 7 ? 2 : n < 10 ? 3 : n < 15 ? 4 : n < 18 ? 5 : 6) + " known";
 			}),
 			extraname : "Trick Shot",
-			extrachoices : ["Bullying Shot", "Dazing Shot", "Deadeye Shot", "Disarming Shot", "Forceful Shot", "Piercing Shot", "Violent Shot", "Winging Shot"],
+			extrachoices : ["Bullying Shot", "Dazing Shot", "Deadeye Shot", "Disarming Shot", "Forceful Shot", "Piercing Shot", "Violent Shot", "Winging Shot", "Out of the Air", "Counter Bullet"],
 			"bullying shot" : {
 				name : "Bullying Shot",
 				source : ["MM:GMA", 2],
@@ -156,13 +156,26 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 					"Use with firearm attack; The target takes damage and must make a Strength save",
 					"If failed, the target is also knocked prone"
 				])
-			},
-			"rapid repair" : {
-				name : "Rapid Repair",
+                        },
+			"out of the air" : {
+				name : "Out of the Air",
 				source : ["MM:GMA", 2],
 				additional : "1 grit point",
-				description : "\n   " + "I can spend a grit point to attempt to repair a misfired firearm as a bonus action."
-			        action : ["bonus action", " (1 grit point)"]
+				description : desc([
+					"Use with firearm attack; As a reaction to enemy making a ranged weapon attack, I can attempt to make a firearm attack against it. Projectile has AC equal to enemy attack roll",
+					"If I hit, the attack misses."
+			        action : ["reaction", " (1 grit point)"]
+                                ])
+                        },
+			"counter bullet" : {
+				name : "Counter Bullet",
+				source : ["MM:GMA", 2],
+                                minlevel : 15,
+				additional : "2 grit points",
+				description : desc([
+					"Use with firearm attack; As a reaction to enemy casting a spell. Target takes no damage and must make a Constitution save",
+					"If failed, the spell fails."
+			        action : ["reaction", " (2 grit points)"] 
 		 } 
                  },
 		"subclassfeature7" : {
