@@ -173,17 +173,13 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 			"counter shot" : {
 				name : "Counter Shot",
 				source : ["MM:GMA", 2],
-				
+				addtional : "2 grit points",
 				description : desc([
-					"As a reaction when I can see a spell being cast, I impose disadv.",
-					"\u2022 Amplify: I make a Wis check (DC 10 + spell's level) to make the spell miss me completely"
+					"As a reaction when I can see a spell being cast, I can make a firearm attack at the caster.",
+					"They do not take damage, and must make a Constitution save. If failed, the spell is not cast"
 				]),
 				action : [" reaction ", " "]
-			}	
-      
-
-
-      
+			}
 		},
 		"subclassfeature7" : {
 			name : "Quickdraw",
