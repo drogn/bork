@@ -157,14 +157,14 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 					"If failed, the target is also knocked prone"
 				])
 			},
-			"out of the air" : {
-				name : "Out of the Air",
+			"intercepting shot" : {
+				name : "Intercepting Shot",
 				source : ["MM:GMA", 2],
 				additional : "1 grit point",
 				description : desc([
 					"As a reaction when a ranged weapon attack is made by a creature I can see, I make an firearm attack against it.",
 					"Projectile AC equals enemy attack roll",
-					
+					"If I hit, the attack misses"
 				
 				])
 			
