@@ -162,7 +162,8 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 				source : ["MM:GMA", 2],
 				additional : "1 grit point",
 				description : desc([
-					"Use with firearm attack; As a reaction to enemy making a ranged weapon attack, I can attempt to make a firearm attack against it. Projectile has AC equal to enemy attack roll",
+					"Use with firearm attack; As a reaction to enemy making a ranged weapon attack, I can attempt to make a firearm attack against it.",
+                                        "Projectile has AC equal to enemy attack roll",
 					"If I hit, the attack misses."
 			        action : ["reaction", " (1 grit point)"]
                                 ])
@@ -173,7 +174,8 @@ AddSubClass("fighter", "gunslinger-v1.3", {
                                 minlevel : 15,
 				additional : "2 grit points",
 				description : desc([
-					"Use with firearm attack; As a reaction to enemy casting a spell. Target takes no damage and must make a Constitution save",
+					"Use with firearm attack; As a reaction to enemy casting a spell", 
+                                        "Target takes no damage and must make a Constitution save",
 					"If failed, the spell fails."
 			        action : ["reaction", " (2 grit points)"] 
 		 } 
