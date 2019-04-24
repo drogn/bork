@@ -164,6 +164,8 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 				description : desc([
 					"As a reaction when a ranged weapon attack is made by a creature I can see, I make an firearm attack against it.",
 					"Projectile AC equals enemy attack roll",
+					
+				
 				])
 			
       action : [" reaction ", " "]
