@@ -162,8 +162,8 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 				source : ["MM:GMA", 2],
 				additional : "1 grit point",
 				description : desc([
-					 when a ranged weapon attack is made by a creature I can see, I make an firearm attack.",
-					""
+					"As a reaction when a ranged weapon attack is made by a creature I can see, I make an firearm attack against it.",
+					"Projectile AC equals enemy attack roll",
 				])
 			
       action : [" reaction ", " "]
