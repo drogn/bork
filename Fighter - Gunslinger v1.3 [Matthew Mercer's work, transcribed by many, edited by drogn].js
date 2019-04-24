@@ -477,8 +477,8 @@ AmmoList["sawed-off shells"] = {
 	name : "Sawed-off Shells",
 	source : ["MM:GMA", 3],
 	weight : 0.015,
-	icon : "Shells",
-	checks : [".Shell"],
+	icon : "Bullets",
+	checks : [".Bullet"],
 	display : 50,
 	invName : "Shells, sawed-off"
 };
