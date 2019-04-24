@@ -177,22 +177,13 @@ AddSubClass("fighter", "gunslinger-v1.3", {
 			action : ["bonus action", " (1 grit point)"]
 	
                  },
-		"subclassfeature10.1" : {
+		"subclassfeature15" : {
 			name : "Lightning Reload",
 			source : ["MM:GMA", 2],
-			minlevel : 10,
+			minlevel : 15,
 			description : "\n   " + "I can reload any firearm as a bonus action",
 			action : ["bonus action", ""] 
-                
                  },
-		"subclassfeature15" : {
-			name : "Trained Professional",
-			source : ["MM:GMA", 2],
-			minlevel : 15,
-			description : "\n   " + "My misfires do not break my weapons. When I would misfire, my guns do not break, but the attack is considered an automatic miss.",
-			
-
-		},
 		"subclassfeature18" : {
 			name : "Vicious Intent",
 			source : ["MM:GMA", 2],
